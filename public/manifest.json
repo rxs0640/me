@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "portfolio-website",
+  "name": "Portfolio site developed using React and deployed to gh-pages",
   "icons": [
     {
       "src": "favicon.ico",
