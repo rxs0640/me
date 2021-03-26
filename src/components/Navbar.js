@@ -1,24 +1,40 @@
-import React, { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './css/Navbar.css'
 
 class Navbar extends React.Component {
+
     constructor(props) {
         super(props);
 
         this.state = {
-            page: window.location.pathname.toLowerCase()
+            page: window.location.pathname.toLowerCase(),
+            setLinks: true,
         }
 
+        this.windowEventListener = this.windowEventListener.bind(this);
     }
 
     componentDidMount() {
-       
+        window.addEventListener('resize', this.windowEventListener);
     }
 
+    windowEventListener = event => {
+        if(window.innerWidth <= 960) {
+            this.setState({
+                setLinks: false
+            })
+        }
+        else {
+            this.setState({
+                setLinks: true
+            })
+        }
+    }
 
     render() {
+        console.log(this.state.setLinks)
         return(
             <nav className='navbar'>
                 <div className='navbar-container'>
@@ -32,7 +48,7 @@ class Navbar extends React.Component {
                     <div className='navbar-title'>
                         Software Engineer
                     </div>
-                    <nav className='navbar-links'>
+                    <nav className='navbar-links' style={this.state.setLinks ? {} : {display: 'none'}}>
                         <li className='navbar-link-item'>
                             <Link to='/me' className={this.state.page === '/me' || this.state.page ==='/me/' ? 'nav-link-active' : 'nav-link'}>
                                 Home
