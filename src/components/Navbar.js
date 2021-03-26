@@ -8,7 +8,7 @@ class Navbar extends React.Component {
         super(props);
 
         this.state = {
-            page: window.location.pathname
+            page: window.location.pathname.toLowerCase()
         }
 
     }
@@ -34,17 +34,17 @@ class Navbar extends React.Component {
                     </div>
                     <nav className='navbar-links'>
                         <li className='navbar-link-item'>
-                            <Link to='/Me' className={this.state.page === '/Me' ? 'nav-link-active' : 'nav-link'}>
+                            <Link to='/me' className={this.state.page === '/me' ? 'nav-link-active' : 'nav-link'}>
                                 Home
                             </Link>
                         </li>
                         <li className='navbar-link-item'>
-                            <Link to='/Projects' className={this.state.page === '/Projects' ? 'nav-link-active' : 'nav-link'}>
+                            <Link to='/projects' className={this.state.page === '/projects' ? 'nav-link-active' : 'nav-link'}>
                                 Projects
                             </Link>
                         </li>
                         <li className='navbar-link-item'>
-                            <Link to='/About' className={this.state.page === '/About' ? 'nav-link-active' : 'nav-link'}>
+                            <Link to='/about' className={this.state.page === '/about' ? 'nav-link-active' : 'nav-link'}>
                                 About
                             </Link>
                         </li>
