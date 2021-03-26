@@ -1,0 +1,28 @@
+:root {
+    /* Colors */
+    --slate: #ececec;
+    --bronze: #cfb490;
+    --light-bronze: #cfc5b8;
+    --salmon: #daaeae;
+    --light-salmon: #d8c3c3;
+    --grey: #808080;
+    --light-grey: #A0A0A0;
+
+    /* Font Sizes */
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+
+    /* Element Sizes */
+    --nav-height: 150px;
+    --footer-height: 75px;
+
+    /* Other Variables */
+    --page-background: white;
+    --border-trim: 2px solid var(--bronze)
+}
