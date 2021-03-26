@@ -34,7 +34,7 @@ class Navbar extends React.Component {
                     </div>
                     <nav className='navbar-links'>
                         <li className='navbar-link-item'>
-                            <Link to='/' className={this.state.page === '/' ? 'nav-link-active' : 'nav-link'}>
+                            <Link to='/Me' className={this.state.page === '/Me' ? 'nav-link-active' : 'nav-link'}>
                                 Home
                             </Link>
                         </li>
