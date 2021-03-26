@@ -34,17 +34,17 @@ class Navbar extends React.Component {
                     </div>
                     <nav className='navbar-links'>
                         <li className='navbar-link-item'>
-                            <Link to='/me' className={this.state.page === '/me' ? 'nav-link-active' : 'nav-link'}>
+                            <Link to='/me' className={this.state.page === '/me' || this.state.page ==='/me/' ? 'nav-link-active' : 'nav-link'}>
                                 Home
                             </Link>
                         </li>
                         <li className='navbar-link-item'>
-                            <Link to='/projects' className={this.state.page === '/projects' ? 'nav-link-active' : 'nav-link'}>
+                            <Link to='/projects' className={this.state.page === '/projects' || this.state.page === '/projects/' ? 'nav-link-active' : 'nav-link'}>
                                 Projects
                             </Link>
                         </li>
                         <li className='navbar-link-item'>
-                            <Link to='/about' className={this.state.page === '/about' ? 'nav-link-active' : 'nav-link'}>
+                            <Link to='/about' className={this.state.page === '/about' || this.state.page === '/about/' ? 'nav-link-active' : 'nav-link'}>
                                 About
                             </Link>
                         </li>
