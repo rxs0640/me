@@ -16,10 +16,12 @@ class Navbar extends React.Component {
     }
 
     componentDidMount() {
+        // Add listener event to hide navlinks when window size is too small
         window.addEventListener('resize', this.windowEventListener);
     }
 
-    windowEventListener = event => {
+    windowEventListener = (e) => {
+        // Hide navbar links
         if(window.innerWidth <= 960) {
             this.setState({
                 setLinks: false
@@ -43,7 +45,7 @@ class Navbar extends React.Component {
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <div className='navbar-logo'>
-                        <Link to='/' className='navbar-logo'>
+                        <Link to='/me' onClick={() => this.handlePageChange('me')} className='navbar-logo'>
                             <div>Roger</div>
                             <div style={{paddingLeft:'25px'}}>Sengphanith</div>
                         </Link>
