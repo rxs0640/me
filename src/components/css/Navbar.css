@@ -5,10 +5,9 @@
     width: 100%;
     height: var(--nav-height);
     display: flex;
-    position: absolute;
-    top: 0;
-    z-index: 999;
+    position: relative;
     border-bottom: var(--border-trim);
+    z-index: 100;
 }
 
 .navbar-container {
@@ -32,7 +31,7 @@
 }
 
 .navbar-title {
-    margin-top: 80px;
+    padding-top: 80px;
     height: 50%;
     font-size: var(--fz-xl);
     color: var(--grey);
@@ -41,7 +40,7 @@
 .navbar-links {
     display: flex;
     width: 400px;
-    top: 65px;
+    padding-top: 65px;
     right: 20px;
     position: absolute;
 }
