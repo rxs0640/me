@@ -25,7 +25,7 @@ class Me extends React.Component {
     
     render() {
         return(
-            <div>
+            <div className='container'>
                 <Navbar onPageChange={this.handlePageChange} page={this.state.page}/>
                 { this.state.page === 'me' ?
                 <div className='content-body'>
@@ -37,8 +37,17 @@ class Me extends React.Component {
                 </div>
                 : this.state.page === 'about' ?
                 <About />
+                : this.state.page === 'projects' ?
+                <Projects />
                 : ''}
                 <Footer />
+                
+                <div className='sticky-social-media'>
+
+                </div>
+                <div className='sticky-email'>
+                    <a className='email-link' href='mailto:rxs0640@gmail.com'>rxs0640@gmail.com</a>
+                </div>
             </div>
         );
     }
