@@ -1,0 +1,10 @@
+@import './Theme.css';
+
+.page-footer {
+    position: relative;
+    width: 100%;
+    height: var(--footer-height);
+    background: var(--slate);
+    border-top: var(--border-trim);
+    z-index: 100;
+}
