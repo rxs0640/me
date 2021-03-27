@@ -8,7 +8,6 @@ class About extends React.Component {
     render() {
         return(
             <>
-               <Navbar />
                <div className='content-body'>About</div>
             </>
         );

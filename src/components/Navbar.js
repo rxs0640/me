@@ -9,7 +9,6 @@ class Navbar extends React.Component {
         super(props);
 
         this.state = {
-            page: window.location.pathname.toLowerCase(),
             setLinks: true,
         }
 
@@ -33,8 +32,13 @@ class Navbar extends React.Component {
         }
     }
 
+    handlePageChange = (newPage) => {
+
+        this.props.onPageChange(newPage)
+    }
+
     render() {
-        console.log(this.state.setLinks)
+        
         return(
             <nav className='navbar'>
                 <div className='navbar-container'>
@@ -49,18 +53,18 @@ class Navbar extends React.Component {
                         Software Engineer
                     </div>
                     <nav className='navbar-links' style={this.state.setLinks ? {} : {display: 'none'}}>
-                        <li className='navbar-link-item'>
-                            <Link to='/me' className={this.state.page === '/me' || this.state.page ==='/me/' ? 'nav-link-active' : 'nav-link'}>
+                        <li className='navbar-link-item' onClick={() => this.handlePageChange('me')}>
+                            <Link className={this.props.page === 'me' ? 'nav-link-active' : 'nav-link'}>
                                 Home
                             </Link>
                         </li>
-                        <li className='navbar-link-item'>
-                            <Link to='/projects' className={this.state.page === '/projects' || this.state.page === '/projects/' ? 'nav-link-active' : 'nav-link'}>
+                        <li className='navbar-link-item' onClick={() => this.handlePageChange('projects')}>
+                            <Link className={this.props.page === 'projects' ? 'nav-link-active' : 'nav-link'}>
                                 Projects
                             </Link>
                         </li>
-                        <li className='navbar-link-item'>
-                            <Link to='/about' className={this.state.page === '/about' || this.state.page === '/about/' ? 'nav-link-active' : 'nav-link'}>
+                        <li className='navbar-link-item' onClick={() => this.handlePageChange('about')}>
+                            <Link className={this.props.page === 'about' ? 'nav-link-active' : 'nav-link'}>
                                 About
                             </Link>
                         </li>

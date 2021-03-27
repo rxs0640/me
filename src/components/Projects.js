@@ -8,7 +8,6 @@ class Projects extends React.Component {
     render() {
         return(
             <>
-               <Navbar />
                <div className='content-body'>Projects</div>
             </>
         );
